@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="Utf-8">
+  <meta name="author" content="migherize">
+  <link rel="icon" href="{% static 'img/ajedrez.jpg' %}" alt="My image">
+  <title>home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"/>
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/plataforma.css' %}">
+</head>
+<body>
+  <section class="hero is-medium is-fullheight is-dark" id="fondo">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <h2 class="title is-2" style="vertical-align: center;color: white;"> CHESS-LIVE</h2>
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span><i class=" fas fa-home"> Inicio</i></span>
+            <span><i class="fab fa-github"> Clase</i></span>
+            <span><i class=""> Estilo de Juego</i></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active"><i class=" fas fa-chess-rook"> Inicio</i> </a>
+
+            <a class="navbar-item"> <i class="fas fa-chess-knight"> Estilo de Juego</i> </a>
+            <a class="navbar-item is-hoverable"> <i class="fas fa-chess-bishop"> Clase</i></a>
+            <span class="navbar-item">
+              <a href="{% url 'login' %}" class="button" style="background-color:#0000FF;border: #0000FF;">
+                <span class="icon" style="color: white;">
+                  <i class="fas fa-chess-pawn"></i>
+                </span>
+                <span style="color: white;">Cerrar Sesion</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Title
+      </h1>
+      <h2 class="subtitle">
+        Subtitle
+      </h2>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul class="foot">
+          <li class="is-active"><a> <i class="fas fa-chess-rook">  </i> Visión general</a></li>
+          <li><a><i class="fas fa-chess-knight"> </i> Asignaciones</a></li>
+          <li><a><i class="fas fa-chess-bishop" style="margin-right: 5px;"> </i> Ejercicios</a></li>
+          <li><a><i class=" fas fa-chess-king"> </i> Base de Datos</a></li>
+          <li><a><i class=" fas fa-chess-queen"></i> Jugar</a></li>
+          <li><a><i class=" fas fa-chess-pawn"></i> Torneos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+</body>
+</html>

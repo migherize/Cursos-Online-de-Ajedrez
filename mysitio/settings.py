@@ -25,7 +25,7 @@ SECRET_KEY = 'mijs1%#i^ocdu@!zy5r$62v6b%7+b&_5-r7emqka8pg*87l(e_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.ChessStyleLife.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition

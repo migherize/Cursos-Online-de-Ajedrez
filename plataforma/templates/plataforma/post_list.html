@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="Utf-8">
+  	<meta name="author" content="migherize">
+  	<link rel="icon" href="{% static 'img/ajedrez.jpg' %}" alt="My image">
+	<title>{% block title%} Chess-Live {% endblock %}</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"/>
+  	<link rel="stylesheet" type="text/css" href="{% static 'css/plataforma.css' %}">
+</head>
+<body class="layout-default">
+  <section class="hero is-fullheight is-medium is-dark is-bold" id="fondo" >
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-centered">
+              <article class="card is-rounded " id="carta">
+
+              	{% block chess-live %}
+
+				{% endblock %}
+
+              	{% block login %}
+
+              	{% endblock %}
+
+              	{% block register %}
+
+              	{% endblock %}
+
+              	{% block forget %}
+
+              	{% endblock %}
+
+              </article>
+            </div>
+          </div>
+  </section>
+</body>
+</html>
+
+

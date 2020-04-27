@@ -1,0 +1,79 @@
+{% extends 'plataforma/post_list.html' %}
+{% load static %}
+
+{% block title %}	Registro	{% endblock %}
+
+{% block register %}
+<div class="card-content hero" id="carta-contenido">
+	<figure class="image is-centered" id="imagen-cont">
+		<img class="is-rounded is-centered" src="{% static 'img/ajedrez.jpg' %}" alt="My image">
+	</figure>
+                  <form action="" id="perfil" name="formulario" method="get">
+                    <!--usario-->
+                    <label> 
+                      <h5 class="title is-5" style="color: black;">
+                        <i class="fa fa-user"></i> Usuario o Nickname:
+                      </h5>
+                    </label>
+                    <p class="control has-icon">  
+                      <input class="input" type="text" placeholder="Usuario o Nickname">
+                    </p>
+                    <br>
+                    <!--Correo-->
+                    <label> 
+                      <h5 class="title is-5" style="color: black;">
+                        <i class="fa fa-envelope"></i> Correo:
+                      </h5>
+                    </label>
+                    <p class="control has-icon">  
+                        <input class="input" type="email" placeholder="Correo">
+                    </p>
+                    <br>
+                    <!--Clave-->
+                    <label> 
+                      <h5 class="title is-5" style="color: black;">
+                        <i class="fa fa-lock"></i> Contraseña:
+                      </h5>
+                    </label>
+                    <p class="control has-icon">  
+                        <input class="input" type="password" placeholder="Contraseña">
+                    </p>
+                    <br>
+                    <!--Clave repite-->
+                    <label> 
+                      <h5 class="title is-5" style="color: black;">
+                        <i class="fa fa-lock"></i> Confirmación de contraseña:
+                      </h5>
+                    </label>
+                    <p class="control has-icon">  
+                        <input class="input" type="password" placeholder="Contraseña">
+                    </p>
+                    <br>
+                     <label> 
+                        <i class="fas fa-venus-mars title is-5" style="color: black;"> Sexo:</i> 
+                    </label>
+                    <label class="checkbox" style="margin-left: 0px;">
+                        <input type="checkbox"> <span class=" tag is-danger" style=" "><i class="fas fa-chess-queen"> Femenino</i> </span>
+                    </label>
+                    <label class="checkbox" style="float: right;">
+                        <input type="checkbox"> <span class=" tag is-link"> <i class="fas fa-chess-king"> Masculino</i></span>
+                    </label>
+                  </form>
+                  <p class="control">
+        <a href="">
+	    	<button class="button is-link is-medium is-fullwidth" style="margin-bottom: 10px;">
+	        	<i class="fas fa-home" > Registrarme</i>
+	    	</button>
+		</a>
+        <a href="{% url 'login' %}">
+	        <button class="button is-medium is-fullwidth" style="background-color:#0000FF; border-color:#0000FF; margin-bottom: 10px;">
+	                <i class="fa fa-user" style="color:white;" > Iniciar Sesión</i>
+	        </button>
+        </a>
+    </p>                 
+</div>
+<div class="control" style="text-align:center;">
+	<a href="https://github.com/migherize/Cursos-Online-de-Ajedrez" style="color:white;"> <i class="fab fa-github"></i> @migherize</a>
+</div>
+
+{% endblock %}

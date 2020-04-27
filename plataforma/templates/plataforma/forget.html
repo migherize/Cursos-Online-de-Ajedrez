@@ -1,0 +1,34 @@
+{% extends 'plataforma/post_list.html' %}
+{% load static %}
+
+{% block title %}	Forget	{% endblock %}
+
+
+{% block register %}
+
+<div class="card-content hero" id="carta-contenido">
+	<figure class="image is-centered" id="imagen-cont">
+		<img class="is-rounded is-centered" src="{% static 'img/ajedrez.jpg' %}" alt="My image">
+	</figure>
+	        					
+	<label > 
+		<h5 class="title is-5">
+			<i class="fa fa-envelope"> Correo Electronico:</i>
+		</h5>
+	</label>
+	<p class="control has-icon">  
+		<input class="input" type="email" placeholder=" Correo Electronico">
+	</p>
+	<p class="control">
+        <a href="">
+	        <button class="button is-medium is-fullwidth" style="background-color:#0000FF; border-color:#0000FF; margin-bottom: 10px;">
+	                <i class="fa fa-user" style="color:white;" > Recuperar Clave</i>
+	        </button>
+        </a>
+    </p>
+</div>
+<div class="control" style="text-align:center;">
+	<a href="https://github.com/migherize/Cursos-Online-de-Ajedrez" style="color:white;"> <i class="fab fa-github"></i> @migherize</a>
+</div>
+
+{% endblock %}
