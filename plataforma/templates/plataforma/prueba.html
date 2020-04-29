@@ -1,9 +1,7 @@
 {% extends 'plataforma/post_list.html' %}
 {% load static %}
 
-{% block title %}	Login	{% endblock %}
-
-{% block login %}
+{% block prueba %}
 
 <div class="card-content hero" id="carta-contenido">
 	<figure class="image is-centered" id="imagen-cont">
@@ -11,8 +9,8 @@
 	</figure>
 
 <form method="post">
-    {% csrf_token %}	        					
-	<label > 
+    {% csrf_token %}
+    <label > 
 		<h5 class="title is-5">
 			<i class="fa fa-envelope"> Usuario o Correo:</i>
 		</h5>
@@ -30,7 +28,6 @@
 	<p class="control has-icon">
 	    <input class="input" type="password" placeholder="Password" name="password">
 	</p>
-	                  
 	<div>
 		<p class="control" style=" width: 100%;">
 	        <label class="checkbox">
@@ -42,17 +39,19 @@
 	
 	<p class="control">
         <a href="{% url 'main' %}">
-	        <button class="button is-medium is-fullwidth" type="submit" style="background-color:#0000FF; border-color:#0000FF; margin-top: 10px;">
+	        <button class="button is-medium is-fullwidth" type="submit" style="background-color:#0000FF; border-color:#0000FF; margin-bottom: 10px;">
 	                <i class="fa fa-user" style="color:white;" > Iniciar Sesión</i>
 	        </button>
         </a>
-</form>
         <a href="{% url 'register' %}">
-	    	<button class="button is-link is-medium is-fullwidth" ype="submit" style="margin-bottom: 10px;">
+	    	<button class="button is-link is-medium is-fullwidth" style="margin-bottom: 10px;">
 	        	<i class="fas fa-home" > Registrarme</i>
 	    	</button>
 		</a>
     </p>
+	{{form}}
+	<input type="submit" name="submit">
+</form>
 </div>
 <div class="control" style="text-align:center;">
 	<a href="https://github.com/migherize/Cursos-Online-de-Ajedrez" style="color:white;"> <i class="fab fa-github"></i> @migherize</a>
