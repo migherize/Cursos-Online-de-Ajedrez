@@ -1,6 +1,6 @@
 # Cursos Online de Ajedrez 🚀
 
-[link](https://github.com/migherize/Cursos-Online-de-Ajedrez/blob/master/plataforma/static/img/login.jpg)
+![](https://github.com/migherize/Cursos-Online-de-Ajedrez/blob/master/plataforma/static/img/login.jpg)
 
 _Plataforma para que un entrenador de Ajedrez de cursos personalizados a cada alumno, en una plataforma que contara con herramientas como: combinaciones, chats, videotutoriales, una IA de estio de juego._
 
