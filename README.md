@@ -1,7 +1,10 @@
-# Cursos Online de Ajedrez
+# Cursos Online de Ajedrez 🚀
+
+[link](https://github.com/migherize/Cursos-Online-de-Ajedrez/blob/master/plataforma/static/img/login.jpg)
+
 _Plataforma para que un entrenador de Ajedrez de cursos personalizados a cada alumno, en una plataforma que contara con herramientas como: combinaciones, chats, videotutoriales, una IA de estio de juego._
 
-### Prerequisitos
+### Pre-requisitos 📋
 _Para el buen funcionamiento de este software debe tener las siguientes dependecias pre-instaladas:_
 
 1. crear un virtualenv.
@@ -10,6 +13,10 @@ _Para el buen funcionamiento de este software debe tener las siguientes dependec
 4. Instalar PostgresSQL
 5. Instalar paquete psycopg2
 6. Instalar libreria Pillow
+
+### Instalación 🔧
+
+_Para instalar en distribución Linux o cualquier derivados descargar el archivo requirement.txt del proyecto _
 
 ### Despliegue
 
