@@ -46,7 +46,10 @@ class Direccion(models.Model):
 		return self.username
 
 class ELO(models.Model):
-	tipo = models.CharField(max_length=10, primary_key=True)
+
+	elo = models.CharField(max_length=10, primary_key=True)
+	nombre = models.CharField(max_length=30, null=True, blank=True, default=None)
+	cantidad = models.IntegerField()
 	num_win = models.IntegerField()
 	num_lose = models.IntegerField()
 	num_draw = models.IntegerField()

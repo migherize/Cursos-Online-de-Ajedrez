@@ -26,7 +26,8 @@ def signUp(request):
         	if user is not None:
         		login(request, user)
         		print("Bienvenido")
-        		return render(request, 'plataforma/main.html', {})
+        		elo = user.perfil.rankings.all()
+        		return render(request, 'plataforma/main.html', {'elo': elo})
         	else:
         		print("No estas logiado, registrate")
         		return HttpResponseRedirect('/Login/')
@@ -51,6 +52,10 @@ def register(request):
 			user = User.objects.create_user(username, email, password)
 			perfil = Perfil.objects.create(sexo='M', titulo='CM',username=user)
 			foto_basica = Foto.objects.create(ruta='../static/img/user.jpg',username=perfil)
+			elo = ELO.objects.create(elo='Bu',cantidad=1500, nombre='BULLET', num_win=0, num_draw=0,num_lose=0, username=perfil)
+			elo = ELO.objects.create(elo='B',cantidad=1500, nombre='BLIZT', num_win=0, num_draw=0,num_lose=0, username=perfil)
+			elo = ELO.objects.create(elo='R',cantidad=1500, nombre='RAPIDO', num_win=0, num_draw=0,num_lose=0, username=perfil)
+			elo = ELO.objects.create(elo='C',cantidad=1500, nombre='CLASICO', num_win=0, num_draw=0,num_lose=0, username=perfil)
 			if tipo =='A':
 				print("alumno")
 				alumno = Estudiante.objects.create(promedio=0,username=user)

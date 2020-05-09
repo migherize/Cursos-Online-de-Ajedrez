@@ -70,6 +70,13 @@
 
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
+
+  {%for e in elo%}
+    <h1>{{ e.elo }}</h1>
+    <h2>{{ e.nombre }}</h2>
+    <h3>{{ e.cantidad }}</h3>
+  {% endfor %}
+
     {% block perfil %} 
 
     {% endblock %}
