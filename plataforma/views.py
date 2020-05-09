@@ -5,6 +5,7 @@ from .forms import *
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.views.generic import CreateView
+from django.core.mail import EmailMessage
 # Create your views here.
 
 def ChessLive(request):
@@ -58,5 +59,26 @@ def signOut(request):
 	print("Hasta Luego")
 	return HttpResponseRedirect('/login/')
 
+def contact(request):
+    if request.method == 'POST':
+        formulario = Contactanos(request.POST)
+        if formulario.is_valid():
+            titulo = 'Mensaje desde chess-live de'
+            for i in formulario:
+                print("i",i)
+            contenido = formulario.cleaned_data['mensaje'] + "\n"
+            contenido = contenido + formulario.cleaned_data['correo']
+            print(titulo,contenido)
+            correo = EmailMessage(titulo, contenido,to = ['manherize@gmail.com'])
+            correo.send()
+            print("envio")
+            return HttpResponseRedirect('/')
+    else:
+        formulario = Contactanos
+    return render(request, 'plataforma/contact.html',{'formulario': formulario})
+
 def main(request):
 	return render(request, 'plataforma/main.html',{})
+
+def perfil(request):
+	return render(request, 'plataforma/perfil.html',{})

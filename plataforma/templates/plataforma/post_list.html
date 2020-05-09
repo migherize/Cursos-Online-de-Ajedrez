@@ -17,14 +17,13 @@
             <div class="columns is-centered">
               <article class="card is-rounded " id="carta">
 
-				{% block prueba %}
+        				{% block prueba %}
 
-				{% endblock %}
+        				{% endblock %}
 				
               	{% block chess-live %}
 
-				{% endblock %}
-
+				        {% endblock %}
 
               	{% block login %}
 
@@ -38,9 +37,24 @@
 
               	{% endblock %}
 
+                {% block contactanos %}
+
+                {% endblock %}
+
               </article>
             </div>
           </div>
+        </div>
+  
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul class="foot">
+          <li class="is-active" style="margin-left: auto; margin-right: auto;"><a href="{% url 'contact' %}"> <i class="fas fa-chess-king">  </i> Contactanos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   </section>
 </body>
 </html>

@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="Utf-8">
+  <meta name="author" content="migherize">
+  <link rel="icon" href="{% static 'img/ajedrez.jpg' %}" alt="My image">
+  <title>home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"/>
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/plataforma.css' %}">
+</head>
+<body>
+  <section class="hero is-medium is-fullheight is-dark" id="fondo">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <h2 class="title is-2" style="vertical-align: center;color: white;"> CHESS-LIVE</h2>
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span><i class=" fas fa-home"> Inicio</i></span>
+            <span><i class="fab fa-github"> Clase</i></span>
+            <span><i class=""> Estilo de Juego</i></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active"><i class=" fas fa-chess-rook"> Inicio</i> </a>
+
+            <a class="navbar-item"> <i class="fas fa-chess-knight"> Estilo de Juego</i> </a>
+            <a class="navbar-item is-hoverable"> <i class="fas fa-chess-bishop"> Clase</i></a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  More
+                </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    About
+                  </a>
+                  <a class="navbar-item">
+                    Jobs
+                  </a>
+                  <a class="navbar-item">
+                    Contact
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">
+                    Report an issue
+                  </a>
+              </div>
+              </div>
+
+            <span class="navbar-item">
+              <a href="{% url 'logout' %}" class="button" style="background-color:#0000FF;border: #0000FF;">
+                <span class="icon" style="color: white;">
+                  <i class="fas fa-chess-pawn"></i>
+                </span>
+                <span style="color: white;">Cerrar Sesion</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="columns">
+
+      <div class="column is-four-fifths ">
+
+          <form class="perfil">
+            <div class="field">
+                <label class="label">Nombre</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Apellido</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-success" type="text" placeholder="Text input" value="">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                      <i class="fas fa-check"></i>
+                    </span>
+                </div>
+              <p class="help is-success">This username is available</p>
+            </div>
+
+
+            <div class="field">
+              <label class="label">Username</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-success" type="text" placeholder="Text input" value="">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                      <i class="fas fa-check"></i>
+                    </span>
+                </div>
+              <p class="help is-success">This username is available</p>
+            </div>
+
+              <div class="field">
+                <label class="label">Correo</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p class="help is-danger">This email is invalid</p>
+              </div>
+
+              <div class="field"> 
+
+                <label class="label"> 
+                  <i class="fas fa-venus-mars"> </i> Sexo: 
+                  <label class="checkbox" style="margin-left: 20px;">
+                    <input type="checkbox"> <span class=" tag is-danger" style=" "><i class="fas fa-chess-queen"> Femenino</i> </span>
+                  </label>
+                  <label class="checkbox" style="float: right;">
+                    <input type="checkbox"> <span class=" tag is-link"> <i class="fas fa-chess-king"> Masculino</i></span>
+                  </label>
+                </label>
+
+              </div>
+
+              <div class="field">
+                <label class="label">Pais</label>
+                <div class="control has-icons-left">
+                  <div class="select is-rounded">
+                    <select>
+                      <option selected>Country</option>
+                      <option >Argentina</option>
+                      <option >Bolivia</option>
+                      <option >Brazil</option>
+                      <option >Chile</option>
+                      <option >Colombia</option>
+                      <option >Ecuador</option>
+                      <option >Guyana</option>
+                      <option >Paraguay</option>
+                      <option >Peru</option>
+                      <option >Suriname</option>
+                      <option >Uruguay</option>
+                      <option >Venezuela</option>
+
+                    </select>
+                  </div>
+                    <div class="icon is-small is-left">
+                      <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Titulo</label>
+                <div class="control">
+                  <div class="select is-rounded">
+                    <select>
+                      <option>Ninguno</option>
+                      <option>NM - Maestro Nacional</option>
+                      <option>CM - Candidato Maestro</option>
+                      <option>MF - Maestro Fide</option>
+                      <option>IM - Maestro internacional</option>
+                      <option>GM - Gran Maestro</option>
+
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Textarea"></textarea>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    I agree to the <a href="#">terms and conditions</a>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <label class="radio">
+                    <input type="radio" name="question">
+                    Yes
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="question">
+                    No
+                  </label>
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                  <button class="button is-link is-light">Cancel</button>
+                </div>
+              </div>
+            </form>
+      </div>
+  
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+              <a href="#">#css</a> <a href="#">#responsive</a>
+              <br>
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Component
+            </p>
+            <a href="#" class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </a>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+              <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+              <br>
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <a href="#" class="card-footer-item">Save</a>
+            <a href="#" class="card-footer-item">Edit</a>
+            <a href="#" class="card-footer-item">Delete</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul class="foot">
+          <li class="is-active"><a> <i class="fas fa-chess-rook">  </i> Visión general</a></li>
+          <li><a><i class="fas fa-chess-knight"> </i> Asignaciones</a></li>
+          <li><a><i class="fas fa-chess-bishop" style="margin-right: 5px;"> </i> Ejercicios</a></li>
+          <li><a><i class=" fas fa-chess-king"> </i> Base de Datos</a></li>
+          <li><a><i class=" fas fa-chess-queen"></i> Jugar</a></li>
+          <li><a><i class=" fas fa-chess-pawn"></i> Torneos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+</body>
+</html>

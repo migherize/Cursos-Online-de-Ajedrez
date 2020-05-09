@@ -1,0 +1,52 @@
+{% extends 'plataforma/post_list.html' %}
+{% load static %}
+
+{% block title %}	Contactanos	{% endblock %}
+
+{% block contactanos %}
+
+<div class="card-content hero" id="carta-contenido">
+	<figure class="image is-centered" id="imagen-cont">
+		<img class="is-rounded is-centered" src="{% static 'img/contacto.jpg' %}" alt="My image">
+	</figure>
+
+<form method="post">
+    {% csrf_token %}	        					
+	<label > 
+		<h5 class="title is-5">
+			<i class="fa fa-envelope"> Usuario o Correo:</i>
+		</h5>
+	</label>
+	<p class="control has-icon">  
+		<input class="input" type="email" placeholder="Correo" name="correo">
+	</p>
+	                    
+	<label >
+ 		<h5 class="title is-5"> 
+			<i class="fa fa-lock"> Contactanos:</i> 
+		</h5>
+	</label>
+
+	<p class="control has-icon">
+		<textarea rows="5" cols="28" placeholder="mensaje" name="mensaje"> </textarea>
+	</p>
+	
+	<p class="control">
+        <a href="{% url 'login' %}">
+	        <button class="button is-medium is-fullwidth" type="submit" style="background-color:#0000FF; border-color:#0000FF; margin-top: 10px;">
+	                <i class="fa fa-user" style="color:white;" > Enviar </i>
+	        </button>
+        </a>
+</form>
+        <a href="{% url 'login' %}">
+	    	<button class="button is-link is-medium is-fullwidth" ype="submit" style="margin-bottom: 10px;">
+	        	<i class="fas fa-home" > Volver </i>
+	    	</button>
+		</a>
+    </p>
+</div>
+<div class="control" style="text-align:center;">
+	<a href="https://github.com/migherize/Cursos-Online-de-Ajedrez" style="color:white;"> <i class="fab fa-github"></i> @migherize</a>
+</div>
+
+{% endblock %}

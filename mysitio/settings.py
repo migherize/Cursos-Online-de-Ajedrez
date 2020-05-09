@@ -126,3 +126,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_URL = '/inicia-sesion/'
 LOGIN_REDIRECT_URL = '/'
+
+
+#Configuraciones para enviar mensaje pusando gmail
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'migherize@gmail.com'
+EMAIL_HOST_PASSWORD = 'Mig25832303('
+EMAIL_PORT = 587
