@@ -38,8 +38,8 @@
                 </a>
 
                 <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    About
+                  <a href="{% url 'perfil' %}" class="navbar-item">
+                    Perfil
                   </a>
                   <a class="navbar-item">
                     Jobs
@@ -70,14 +70,11 @@
 
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        Title
-      </h1>
-      <h2 class="subtitle">
-        Subtitle
-      </h2>
-    </div>
+    {% block perfil %} 
+
+    {% endblock %}
+
+
   </div>
 
   <!-- Hero footer: will stick at the bottom -->

@@ -39,11 +39,25 @@ def signUp(request):
 def register(request):
 	if request.method == 'POST':
 		form = Register(request.POST)
+		print(request.POST)
+		print("-------")
+		print(form)
 		if form.is_valid():
 			username = form.cleaned_data['username']
 			email = form.cleaned_data['email']
 			password = form.cleaned_data['password']
+			tipo = form.cleaned_data['tipo']
+			print("Aqui")
 			user = User.objects.create_user(username, email, password)
+			perfil = Perfil.objects.create(sexo='M', titulo='CM',username=user)
+			foto_basica = Foto.objects.create(ruta='../static/img/user.jpg',username=perfil)
+			if tipo =='A':
+				print("alumno")
+				alumno = Estudiante.objects.create(promedio=0,username=user)
+			if tipo =='P':
+				print("Profesor")
+				profesor = Tutor.objects.create(Salario=0,username=user)
+
 			return HttpResponseRedirect('/login/')
 	else:
 		print("Debe llenar todo")
@@ -81,4 +95,20 @@ def main(request):
 	return render(request, 'plataforma/main.html',{})
 
 def perfil(request):
-	return render(request, 'plataforma/perfil.html',{})
+	form = Perfile(request.POST)
+	print("re",request.POST)
+	print("form",form)
+	return render(request, 'plataforma/perfil.html',{'form':form})
+
+def prueba(request):
+	form = Prueba(request.POST)
+	print("re",request.POST)
+	for i in form:
+		print("i",i)
+	if form.is_valid():
+		username = form.cleaned_data['username']
+		print("u",username)
+		tipo = form.cleaned_data['tipo']
+		print("t",tipo)
+
+	return render(request, 'plataforma/prueba.html',{'form':form})

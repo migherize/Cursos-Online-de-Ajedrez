@@ -50,15 +50,17 @@
                   <input class="input" type="password" placeholder="Contraseña" name="password2">
                 </p>
                 <br>
-                <label> 
-                  <i class="fas fa-venus-mars title is-5" style="color: black;"> Sexo:</i> 
+
+                <label > 
+                  <i class="fas fa-venus-mars title is-5" style="color: black;"> Tipo:</i> 
                 </label>
-                <label class="checkbox" style="margin-left: 0px;">
-                  <input type="checkbox"> <span class=" tag is-danger" style=" "><i class="fas fa-chess-queen"> Femenino</i> </span>
+                <label class="radio" style="margin-left: 0px;">
+                  <input type="radio" name="tipo" value="P"> <span class=" tag is-primary" style=" "><i class="fas fa-chess-queen"> Profesor</i> </span>
                 </label>
-                <label class="checkbox" style="float: right;">
-                  <input type="checkbox"> <span class=" tag is-link"> <i class="fas fa-chess-king"> Masculino</i></span>
+                <label class="radio" style="float: right;">
+                  <input type="radio" name="tipo" value="A"> <span class=" tag is-link"> <i class="fas fa-chess-king"> Alumno</i></span>
                 </label>
+                
                 <p class="control">
                   <a href="">
                     <button class="button is-link is-medium is-fullwidth" type="submit" style="margin-bottom: 10px;">

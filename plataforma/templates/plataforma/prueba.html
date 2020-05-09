@@ -10,45 +10,6 @@
 
 <form method="post">
     {% csrf_token %}
-    <label > 
-		<h5 class="title is-5">
-			<i class="fa fa-envelope"> Usuario o Correo:</i>
-		</h5>
-	</label>
-	<p class="control has-icon">  
-		<input class="input" type="text" placeholder="Usuario o Correo" name="username">
-	</p>
-	                    
-	<label >
- 		<h5 class="title is-5"> 
-			<i class="fa fa-lock"> Contraseña:</i> 
-		</h5>
-	</label>
-
-	<p class="control has-icon">
-	    <input class="input" type="password" placeholder="Password" name="password">
-	</p>
-	<div>
-		<p class="control" style=" width: 100%;">
-	        <label class="checkbox">
-	            <input type="checkbox"> <span class=" tag is-dark" style="background: black;">Recordar</span>
-	                </label>
-	                    <a class="tag is-dark is-light" href="{% url 'forget' %}" style="text-decoration: none; float: right; background: black;"> ¿Olvide mi clave?</a>
-    	</p>
-    </div>
-	
-	<p class="control">
-        <a href="{% url 'main' %}">
-	        <button class="button is-medium is-fullwidth" type="submit" style="background-color:#0000FF; border-color:#0000FF; margin-bottom: 10px;">
-	                <i class="fa fa-user" style="color:white;" > Iniciar Sesión</i>
-	        </button>
-        </a>
-        <a href="{% url 'register' %}">
-	    	<button class="button is-link is-medium is-fullwidth" style="margin-bottom: 10px;">
-	        	<i class="fas fa-home" > Registrarme</i>
-	    	</button>
-		</a>
-    </p>
 	{{form}}
 	<input type="submit" name="submit">
 </form>
